@@ -16,13 +16,14 @@
 }
 
 html {
-    overflow-x: hidden;
     scroll-behavior: smooth;
+
 }
 
 body {
     font-family: "Ubuntu", sans-serif;
     font-family: "Overpass", sans-serif;
+    overflow: hidden;
 }
 
 section+section {
