@@ -23,7 +23,7 @@ html {
 body {
     font-family: "Ubuntu", sans-serif;
     font-family: "Overpass", sans-serif;
-    overflow: hidden;
+
 }
 
 section+section {
@@ -169,7 +169,9 @@ a {
       min-height: 80vh;
             justify-content: center;
 }
-
+.sect__2 {
+    overflow: hidden;
+}
 .sect__3 {
     background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     border-top-right-radius: 6rem;
