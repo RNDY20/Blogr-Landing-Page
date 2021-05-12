@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 @import './normalize.css';
+
 *,
 *::after,
 *::before {
@@ -144,49 +145,29 @@ p {
 
 .navbar__dropdown.show .dropdown-link {
     padding: 1rem 0;
+    max-height: 250px;
 }
 
-.navbar__dropdown.show .h--lg {
-    height: 226px;
-
-}
-
-.navbar__dropdown.show .h--md {
-    height: 188px;
-
-}
-
-.navbar__dropdown.show .h--sm {
-    height: 149px;
-
-}
 
 .dropdown-link {
-    height: 0;
+    max-height: 0;
     border-radius: 5px;
+    overflow: hidden;
     background-color: #f1f1f1;
-    transition: height 500ms ease-out;
-    -webkit-transition: height 500ms ease-out;
-    -moz-transition: height 500ms ease-out;
-    -ms-transition: height 500ms ease-out;
-    -o-transition: height 500ms ease-out;
+    transition: max-height 500ms ease-out;
+    -webkit-transition: max-height 500ms ease-out;
+    -moz-transition: max-height 500ms ease-out;
+    -ms-transition: max-height 500ms ease-out;
+    -o-transition: max-height 500ms ease-out;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
 
-.dropdown-link>a {
-    visibility: hidden;
-}
-
 .dropdown-link>a,
 .dropdown-link {
     margin: .65rem 0;
-}
-
-.navbar__dropdown.show .dropdown-link>a {
-    visibility: visible;
 }
 
 .navbar__toggle {
@@ -474,33 +455,22 @@ header,
         text-align: start;
         top: 40px;
         left: -20px;
+        max-height: 0;
+        overflow: hidden;
+        padding: 1rem 3rem 1rem 1.5rem;
+        visibility: hidden;
         background-color: hsl(0, 0%, 100%);
-        transition: padding 500ms ease;
-        -webkit-transition: padding 500ms ease;
-        -moz-transition: padding 500ms ease;
-        -ms-transition: padding 500ms ease;
-        -o-transition: padding 500ms ease;
+        transition: max-height 700ms ease;
+        -webkit-transition: max-height 700ms ease;
+        -moz-transition: max-height 700ms ease;
+        -ms-transition: max-height 700ms ease;
+        -o-transition: max-height 700ms ease;
     }
 
-    .navbar__dropdown:hover .h--lg {
-        padding: 6rem 4rem 6rem 1rem;
-    }
-
-    .navbar__dropdown:hover .h--md {
-        padding: 5rem 4rem 5rem 1rem;
-    }
-
-    .navbar__dropdown:hover .h--sm {
-        padding: 4rem 4rem 4rem 1rem;
-    }
-
-    .navbar__dropdown:hover .dropdown-link>a,
-    .navbar__dropdown:hover .h--lg,
-    .navbar__dropdown:hover .h--md,
-    .navbar__dropdown:hover .h--sm {
+    .navbar__dropdown:hover .dropdown-link {
+        max-height: 250px;
         visibility: visible;
     }
-
 
     .navbar__dropdown>a,
     .btn.bg--none {
